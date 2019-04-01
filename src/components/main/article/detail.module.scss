@@ -1,0 +1,32 @@
+$width-100: 100%;
+$width-1200:1200px;
+$margin-center: 0 auto;
+
+.mainContent{
+    width: $width-1200;
+    margin: $margin-center;
+    .detailContentIn{
+        min-height: 300px;
+        
+        // 左侧
+        .mainArticle{
+            overflow: hidden;
+            background: #fff;
+            padding: 15px;
+            .articleTitle{
+                font-size: 18px;
+            }
+            .articleDec{
+                display: flex;
+                line-height: 30px;
+                div{
+                    margin-right: 20px;
+                }
+            }
+        }
+        // 右侧
+        .mainSide{
+            
+        }
+    }
+}
