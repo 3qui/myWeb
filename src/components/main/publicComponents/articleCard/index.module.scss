@@ -1,0 +1,79 @@
+.articleSingle{
+    display: flex;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    .imgBox{
+        width: 250px;
+        height: 160px;
+        padding: 0 10px 0 0;
+        img{
+            width: 240px;
+            height: 160px;  
+        }
+    }
+    .singleRight{
+        width: calc(100% - 250px);
+        flex:1;
+        position: relative;
+        .title{
+            font-size: 16px;
+            font-weight: 500;
+            height: 24px;
+            overflow: hidden;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .boxDec{
+            display: flex;
+            .decBoxIn{
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                padding: 2px 0;
+                .yonghu{
+                    color: #2d85f0;
+                }
+                .yanjing{
+                    color: #6200ea;
+                }
+                .shijian{
+                    color: #f57c00;
+                    font-size: 14px;
+                }
+                span{
+                    margin-left: 3px;
+                    color: #999;
+                }
+            }
+            
+        }
+        .articleSortDec{
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 20px;
+            max-height: 60px;
+            overflow: hidden;
+            word-break:break-all;
+            text-overflow:ellipsis;//显示为省略号
+            display:-webkit-box;//对象作为伸缩盒子模型显示
+            -webkit-box-orient:vertical;//设置或检索伸缩盒对象的子元素的排列方式
+            -webkit-line-clamp:2;//显示行数## 标题文字 ##
+        }
+        .moreBtn{
+            position: absolute;
+            padding: 5px 10px;
+            background: #fc8b63;
+            color:#fff;
+            border-radius:3px;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            .iconfont{
+                font-size: 12px;
+                margin-left: 2px;
+            }
+        }
+    }
+}

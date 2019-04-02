@@ -5,12 +5,11 @@ $margin-center: 0 auto;
 .mainContent{
     width: $width-1200;
     margin: $margin-center;
-    .articleIndexContentIn{
+    .mainContentIn{
         min-height: 300px;
         // 左侧
         .mainArticle{
             overflow: hidden;
-            background: #fff;
             
         }
         // 右侧

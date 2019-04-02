@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Icon, Popover, Affix } from 'antd';
 import { Link } from 'react-router-dom'
-import './header.scss'
+import styles from './header.module.scss'
 
 export default class Header extends React.Component {
     state = {
@@ -18,42 +18,42 @@ export default class Header extends React.Component {
     render(){
         return (
             <header>
-                <div className="topBanner">
-                    <div className="topBannerIn">
-                        <div className="title">Jose的个人网站</div>
-                        <div className="topright">
+                <div className={styles.topBanner}>
+                    <div className={styles.topBannerIn}>
+                        <div className={styles.title}>Jose的个人网站</div>
+                        <div className={styles.topright}>
                         <Popover content='github' trigger="hover">
-                            <i className="iconfont icon-github"></i>
+                            <i className={[`iconfont`,`icon-github`,`${styles.iconfont}`].join(' ')}></i>
                         </Popover>
                         <Popover content='码云' trigger="hover">
-                            <i className="iconfont icon-git"></i>
+                            <i className={[`iconfont`,`icon-git`,`${styles.iconfont}`].join(' ')}></i>
                         </Popover> 
                         <Popover content='微博' trigger="hover">
-                            <i className="iconfont icon-weibo"></i>
+                            <i className={[`iconfont`,`icon-weibo`,`${styles.iconfont}`].join(' ')}></i>
                         </Popover>  
                             
                         </div>
                     </div>
                 </div>
                 <Affix>
-                    <div className="menuBox">
+                    <div className={styles.menuBox}>
                         <Menu
                             onClick={this.handleClick}
                             selectedKeys={[this.state.current]}
                             mode="horizontal"
-                            className="menuItemIn"
+                            className={styles.menuItemIn}
                         >
-                            <Menu.Item key="main" className="menuItemBox">
+                            <Menu.Item key="main" className={styles.menuItemBox}>
                                 <Link to="/main/home">
                                     <Icon type="home" />首页
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="article" className="menuItemBox">
+                            <Menu.Item key="article" className={styles.menuItemBox}>
                                 <Link to="/main/article">
                                     <Icon type="switcher" />列表
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="Info" className="menuItemBox">
+                            <Menu.Item key="Info" className={styles.menuItemBox}>
                                 <Link to="/main/user">
                                     <Icon type="user" />我的
                                 </Link>

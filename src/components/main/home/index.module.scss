@@ -1,0 +1,33 @@
+$width-100: 100%;
+$width-1200:1200px;
+$margin-center: 0 auto;
+
+.mainContent{
+    width: $width-1200;
+    margin: $margin-center;
+    .mainContentIn{
+        min-height: 300px;
+        // 左侧
+        .mainArticle{
+            overflow: hidden;
+        }
+        // 右侧
+        .mainSide{
+            .sideInBox{
+                padding: 15px;
+                border: 1px solid #fff;
+                margin-bottom: 20px;
+            }
+            .sideTitleBox{
+                color: #31708f;
+                background-color: #d9edf7;
+                border-color: #bce8f1;
+            }
+            .sideTitleBox2{
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+            }
+        }
+    }
+}
