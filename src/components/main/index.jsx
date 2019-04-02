@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header'
 import Footer from './footer'
-import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './home'
 import Article from './article'
 import User from './user'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Divider } from 'antd';
+import { Row, Col } from 'antd';
 import styles from "./index.module.scss"
 import ArticleCard from "../publicComponents/articleCard"
 

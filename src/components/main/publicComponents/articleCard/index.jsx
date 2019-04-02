@@ -8,7 +8,6 @@ export default class articleCard extends React.Component {
         super(props);
     }
 
-
     render() {
     
         return (
