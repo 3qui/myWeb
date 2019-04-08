@@ -4,14 +4,18 @@ import AboutIn from './aboutIn'
 
 import * as API_test from '@/api/test'
 
-API_test.testRequest().then(response => {
-    return response.json()
-}).then(result => {
-    console.log(result)
-})
+
 
 export default class Main extends React.Component {
-    
+
+    componentDidMount(){
+        API_test.testRequest().then(response => {
+                return response.json()
+            }).then(result => {
+                console.log(result)
+            })
+    }
+
     render() {
         return (
             <div>
