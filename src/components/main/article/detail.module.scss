@@ -7,14 +7,16 @@ $margin-center: 0 auto;
     margin: $margin-center;
     .detailContentIn{
         min-height: 300px;
-        
+        padding-bottom: 50px;
         // 左侧
         .mainArticle{
             overflow: hidden;
             background: #fff;
-            padding: 15px;
+            padding: 30px 30px;
             .articleTitle{
-                font-size: 18px;
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 20px;
             }
             .articleDec{
                 display: flex;

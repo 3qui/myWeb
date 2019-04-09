@@ -1,21 +1,26 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import styles from "./index.module.scss"
-import ArticleCard from "../publicComponents/articleCard"
+import ArticleCard from "@/components/main/publicComponents/articleCard"
+
+import * as API_article from "@/api/article"
 
 export default class Main extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            articleCards:[
-                { title: '彻底解决win10文件夹右上角出现箭头的方法', looker: 500, id: 1},
-                { title: '同域名下两个静态链接之间的301跳转实现方法', looker: 900, id: 2},
-                { title: '如何更好地利用百度搜索资源平台反馈中心快速解决文章原创问题', looker: 1000, id: 3},
-                { title: 'phpcms修改后台登录函数详细步骤', looker: 2000, id: 4},
-                { title: '整理出360流氓蜘蛛所有ip段，拿走不谢', looker: 5000, id: 5},
-                { title: '详解rss订阅（如何在网站添加rss订阅功能和如何订阅自己喜欢的网站）', looker: 8888, id: 6},
-            ]
+            articleCards:[]
         }
+    }
+
+    componentDidMount(){
+        API_article.getArticle().then(response =>{return response.json()})
+            .then(result => {
+                console.log(result)
+                this.setState({
+                    articleCards:result.data
+                })
+            })
     }
 
     render() {
