@@ -16,7 +16,7 @@ export default class articleCard extends React.Component {
                 return (
                     <div className={styles.articleSingle} key={index}>
                         <div className={styles.imgBox}>
-                            <img src="http://pic17.nipic.com/20111031/8166867_002049106165_2.jpg" alt=""/>
+                            <img src={item.imageUrl} alt=""/>
                         </div>
                         <div className={styles.singleRight}>
                             <div className={styles.title}>{item.title}</div>
