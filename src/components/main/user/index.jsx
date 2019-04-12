@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Tag } from 'antd';
 import styles from './index.module.scss'
 import * as API_user from '@/api/user'
-import formatDate from '@/utils/mixing'
+import * as Minxin from '@/utils/mixing'
 
 export default class Main extends React.Component {
     constructor(){
@@ -76,7 +76,7 @@ export default class Main extends React.Component {
                             出生年月：
                         </Col>
                         <Col span={21} className={styles.itemContent}>
-                            {formatDate(this.state.data.birthday)}
+                            {Minxin.formatDate(this.state.data.birthday)}
                         </Col>
                     </Row>
                     <Row className={styles.itemRow}>

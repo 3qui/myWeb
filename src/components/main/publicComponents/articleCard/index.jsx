@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./index.module.scss"
 import { Link } from 'react-router-dom'
-import formatDate from '@/utils/mixing'
+import * as Minxin from '@/utils/mixing'
 
 
 export default class articleCard extends React.Component {
@@ -23,7 +23,7 @@ export default class articleCard extends React.Component {
                             <div className={styles.boxDec}>
                                 <div className={styles.decBoxIn}>
                                     <i className={[`${`iconfont`}`,`${`icon-shijian`}`,`${styles.shijian}`].join(' ')}></i>
-                                    <span>{formatDate(item.createTime)}</span>
+                                    <span>{Minxin.formatDate(item.createTime)}</span>
                                 </div>
                                 <div className={styles.decBoxIn}>
                                     <i className={[`${`iconfont`}`,`${`icon-yanjing`}`,`${styles.yanjing}`].join(' ')}></i>

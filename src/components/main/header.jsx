@@ -2,10 +2,19 @@ import React from 'react';
 import { Menu, Icon, Popover, Affix } from 'antd';
 import { Link } from 'react-router-dom'
 import styles from './header.module.scss'
+import * as Mixin from '@/utils/mixing'
 
 export default class Header extends React.Component {
     state = {
-        current:'main'
+        current:''
+    }
+
+    componentDidMount(){
+        // 获取当前菜单的current
+        let current = Mixin.getSession('current')
+        this.setState({
+            current:current?current:'main'
+        })
     }
 
     handleClick = (e) => {
@@ -13,6 +22,8 @@ export default class Header extends React.Component {
         this.setState({
             current:e.key
         })
+        // 设置缓存
+        Mixin.setSession('current',e.key)
     }
 
     render(){

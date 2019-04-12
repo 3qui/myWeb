@@ -3,7 +3,7 @@ import { Row, Col, Divider } from 'antd';
 import styles from "./detail.module.scss"
 
 import * as API_article from "@/api/article"
-import formatDate from '@/utils/mixing'
+import * as Minxin from '@/utils/mixing'
 
 export default class Main extends React.Component {
     constructor(){
@@ -36,7 +36,7 @@ export default class Main extends React.Component {
                     <Col className={styles.mainArticle} span={24}>
                         <div className={styles.articleTitle}>{item.title}</div>
                         <div className={styles.articleDec}>
-                            <div className={styles.decDate}>发布时间：{formatDate(item.createTime)}</div>
+                            <div className={styles.decDate}>发布时间：{Minxin.formatDate(item.createTime)}</div>
                             <div className={styles.decLookNum}>浏览数：(50)</div>
                         </div>
                         <Divider style={{marginTop:20,marginBottom:20}}/>
