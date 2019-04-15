@@ -5,9 +5,9 @@ import * as Minxin from '@/utils/mixing'
 
 
 export default class articleCard extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
     

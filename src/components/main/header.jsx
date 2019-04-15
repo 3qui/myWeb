@@ -5,6 +5,10 @@ import styles from './header.module.scss'
 import * as Mixin from '@/utils/mixing'
 
 export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     state = {
         current:''
     }
@@ -27,11 +31,12 @@ export default class Header extends React.Component {
     }
 
     render(){
+        let webInfo = this.props.webInfo
         return (
             <header>
                 <div className={styles.topBanner}>
                     <div className={styles.topBannerIn}>
-                        <div className={styles.title}>Jose的个人网站</div>
+                        <div className={styles.title}>{webInfo.title}</div>
                         <div className={styles.topright}>
                         <Popover content='github' trigger="hover">
                             <i className={[`iconfont`,`icon-github`,`${styles.iconfont}`].join(' ')}></i>
